@@ -7,6 +7,9 @@ namespace myDemoApp.API.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base (options){}
                public DbSet<Value> Values { get; set; }
+               public DbSet<EmployeeData> EmployeeDatas { get; set; }
+               public DbSet<PostData> PostDatas { get; set; } //PostData -> model name ; PostDatas -> table name
+
     
     }
 }

@@ -15,7 +15,7 @@ export class DataService {
   }
 
   getPosts() {
-    return this.http.get('https://jsonplaceholder.typicode.com/posts')
+    return this.http.get('http://localhost:5000/api/posts');
   }
 
 }

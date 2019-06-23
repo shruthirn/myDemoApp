@@ -9,7 +9,6 @@ namespace myDemoApp.API.Data
                public DbSet<Value> Values { get; set; }
                public DbSet<EmployeeData> EmployeeDatas { get; set; }
                public DbSet<PostData> PostDatas { get; set; } //PostData -> model name ; PostDatas -> table name
-
-    
+               public DbSet<User> Users { get; set; }
     }
 }

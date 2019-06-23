@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using myDemoApp.API.Data;
 using Microsoft.EntityFrameworkCore; // added for async request(i.e ToListAsync)
+using Microsoft.AspNetCore.Authorization;
 
 namespace myDemoApp.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -27,7 +29,7 @@ namespace myDemoApp.API.Controllers
             var values = await _context.Values.ToListAsync();
             return Ok(values);
         }
-
+        [AllowAnonymous]
         // GET api/values/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)

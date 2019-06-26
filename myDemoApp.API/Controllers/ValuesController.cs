@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace myDemoApp.API.Controllers
 {
-    [Authorize]
+    //[Authorized]   
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -29,7 +29,7 @@ namespace myDemoApp.API.Controllers
             var values = await _context.Values.ToListAsync();
             return Ok(values);
         }
-        [AllowAnonymous]
+       // [AllowAnonymous]
         // GET api/values/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)

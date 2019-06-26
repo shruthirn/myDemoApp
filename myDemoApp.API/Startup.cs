@@ -65,7 +65,7 @@ namespace myDemoApp.API
 
             // app.UseHttpsRedirection();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
-           app.UseAuthentication();
+          // app.UseAuthentication();
             app.UseMvc(); //middleware that routes the request to correct controller
         }
     }

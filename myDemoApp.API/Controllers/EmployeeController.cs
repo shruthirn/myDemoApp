@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore; // added for async request(i.e ToListAsync)
 using Microsoft.AspNetCore.Authorization;
 
 namespace myDemoApp.API.Controllers
-{   [Authorize]
+{   
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeeController: ControllerBase

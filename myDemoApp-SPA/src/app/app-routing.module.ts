@@ -4,7 +4,7 @@ import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component';
 import { PostListsComponent } from './postLists/postLists.component';
 
-const routes: Routes = [
+const routes1: Routes = [
   {
     path: '',
     component: UsersComponent
@@ -20,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes1)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

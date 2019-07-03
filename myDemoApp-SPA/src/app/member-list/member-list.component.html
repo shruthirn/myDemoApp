@@ -1,3 +1,12 @@
-<p>
-  member-list works!
-</p>
+<h1>Your matches are here</h1>
+
+<ul>
+  <li *ngFor="let user of users$">
+    <a routerLink="/details/{{user.id}}">{{ user.name }}</a>
+
+    <ul>
+      <li>{{ user.email }}</li>
+       <li><img  class="ProfileDp"src="{{ user.url}}" width="150px" height="150px"></li>
+    </ul>
+  </li>
+</ul>

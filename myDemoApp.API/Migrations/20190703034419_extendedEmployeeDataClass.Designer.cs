@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using myDemoApp.API.Data;
 
 namespace myDemoApp.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20190703034419_extendedEmployeeDataClass")]
+    partial class extendedEmployeeDataClass
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,8 +28,6 @@ namespace myDemoApp.API.Migrations
                     b.Property<string>("Designation");
 
                     b.Property<string>("Name");
-
-                    b.Property<string>("Url");
 
                     b.Property<string>("email");
 
@@ -105,7 +105,7 @@ namespace myDemoApp.API.Migrations
             modelBuilder.Entity("myDemoApp.API.Models.Photo", b =>
                 {
                     b.HasOne("myDemoApp.API.Models.EmployeeData", "EmployeeData")
-                        .WithMany()
+                        .WithMany("Photos")
                         .HasForeignKey("EmployeeDataId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

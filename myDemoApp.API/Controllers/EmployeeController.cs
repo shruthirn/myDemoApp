@@ -25,6 +25,7 @@ namespace myDemoApp.API.Controllers
         { 
             //return new string[] { "value1", "value2" };
             var getempData = await _context.EmployeeDatas.ToListAsync();
+           // var getempData = await _context.EmployeeDatas.Include(p => p.Photos).ToListAsync();
             return Ok(getempData);
         }
 

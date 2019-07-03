@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace myDemoApp.API.Models
 {
     public class EmployeeData
@@ -9,6 +11,9 @@ namespace myDemoApp.API.Models
         public string Designation { get; set; }
 
         public string DOB { get; set; }
+
+       // public ICollection<Photo> Photos { get; set; }
+       public string Url { get; set; }
 
     }
 }

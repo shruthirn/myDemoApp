@@ -1,15 +1,63 @@
-<div class="form-group">
-  <button type="submit" class="btn btn-default" (click)="buyTShirt()">T-Shirt (£10)</button>
-  <button type="submit" class="btn btn-default" (click)="buyTrainers()">Trainers (£15)</button>
-  <button type="submit" class="btn btn-default" (click)="buyJeans()">Jeans (£20)</button>
+
+<div class="container">
+<div class="card-deck mb-4 text-center">
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">Free</h4>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+      <ul class="list-unstyled mt-3 mb-4">
+        <li>Send Interests to 10 users for Free</li>
+        <li>Private Chat Unavailable</li>
+        <li>Email support included</li>
+        <li>Help center access</li>
+      </ul>
+      <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+    </div>
+  </div>
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">Pro</h4>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+      <ul class="list-unstyled mt-3 mb-4">
+        <li>Send Interests to 50 users for Free</li>
+        <li>Private Chat available</li>
+        <li>Priority email support</li>
+        <li>Help center access</li>
+      </ul>
+      <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+    </div>
+  </div>
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">Enterprise</h4>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+      <ul class="list-unstyled mt-3 mb-4">
+        <li>Unlimited Access!!!</li>
+        <li>Private Chat available</li>
+        <li>Phone and email support</li>
+        <li>Help center access</li>
+      </ul>
+      <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+    </div>
+  </div>
+</div>
+<div style="text-align: center">
+  <input type="number" [(ngModel)]="finalAmount" style="padding-bottom: 10px;">
+  <h2 *ngIf="paypalLoad">Paypal button is loading</h2>
+  <div id="paypal-checkout-btn"></div>
+  </div>
+
 </div>
 <!--div class="form-group" *ngIf="takePaymentResult">
   <p>Payment Result: {{takePaymentResult}}</p>
 </div-->
 
-<input type="number" [(ngModel)]="finalAmount" style="padding-bottom: 10px;">
-<h2 *ngIf="paypalLoad">Paypal button is loading</h2>
-<div id="paypal-checkout-btn"></div>
 
 
 
